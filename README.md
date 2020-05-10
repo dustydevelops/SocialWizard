@@ -14,7 +14,7 @@ button.
 -----------------------------------------
 # Safari web broswer
 if you cant get safari, you will have to go 
-through this script and change the word
+through all of the  scripts and change the word
 "Safari" to your browswer. 
 might not work right after though.
 # python3.8.x
