@@ -7,61 +7,58 @@ phone = '() - '
 username = 'joshmo'           # the username the bot will use to log in.
 password = 'youllneverguesthis'   # the password the bot will use to log in.
 
+#                        SOCIAL WIZARD                          #
 
-###############################################################################################
-############## just input your details above and then run. the rest of this doesnt matter######
-###############################################################################################
+from selenium import webdriver 
+from time import sleep
 
-from selenium import webdriver      # from selenium import webdriver for web browser automation.
-from time import  sleep             # import sleep from time for creating time delays.
+#       User Credentials        #
 
-url = 'https://www.facebook.com/'   #I nstagrams url
-loggedIn = url + 'login/'  # Instagrams login url
+email = 'dustinmichaelsmith03@gmail.com'
+phone = '() - '
+username = 'dsmithnoswag'        
+password = '1dirtysock'   
+
+#            Urls               #
+
+#                Start Facebook Engagement                   #
 
 
-#######################################################################
-################# Start instagram login process #######################
-#######################################################################
+# Initialize the safari window with facebook login page & wait
+dr = webdriver.Safari()           
+dr.get('https://www.facebook.com/login')
 
-dr = webdriver.Safari() #   initialize the safari window
-dr.get(loggedIn)        #    Go to login page 
-sleep(3)                #    Give the page a chance to load
-                          
-element = dr.find_element_by_xpath("//input[@name='email']")
-element.send_keys(email) #    Enter username
-element = dr.find_element_by_xpath("//input[@name='pass']")
-element.send_keys(password) #   Enter password 
 
-xPath1 = '//*[@id="loginbutton"]'
-login_button = dr.find_element_by_xpath(xPath1) 
+
+
+element = dr.find_elements_by_xpath('//*[@id ="email"]') 
+element[0].send_keys(email) 
+
+print("Username Entered") 
+
+element = dr.find_element_by_xpath('//*[@id ="pass"]') 
+element.send_keys(password) 
+
+print("Password Entered") 
+
+login_button = dr.find_element_by_xpath('//*[@id="loginbutton"]') 
 login_button.click() # click the login button
+sleep(3)
+print("Login Successfull")
 
-sleep(3)
-birthdays = 'https://www.facebook.com/events/birthdays/'
-dr.get(birthdays)
-sleep(3)
+dr.get('https://www.facebook.com/events/birthdays')
 
 tellThem = 'Happy Birthday'
 if tellThem == 'Happy Birthday':
         try:
-                element = dr.find_element_by_xpath('//*[@id="u_0_14"]')
-                element.send_keys(tellThem) #   tell first happy birthday
+                element = dr.find_element_by_xpath('//*[@id="u_0_13"]')
+                element.send_keys(tellThem)
                 sleep(0.1)
-
-                element = dr.find_element_by_xpath('//*[@id="u_0_17"]')
-                element.send_keys(tellThem) #   tell second happy birthday
-                sleep(0.1)
-        
-                element = dr.find_element_by_xpath('//*[@id="u_0_1a"]')
-                element.send_keys(tellThem) #   tell tell thrid happy birthday
-                sleep(0.1)
-
-                element = dr.find_element_by_xpath('//*[@id="u_0_1d"]')
-                element.send_keys(tellThem) #   tell them tell 4th happy birthday
-                sleep(0.1)
-        
+                print("Birthday Wish posted for friend 1") 
+              
+           
         except:
-                print('Done!')
+                pass
                 
 
 #######################################################################
@@ -72,8 +69,6 @@ dr.close()           #    close window
 #######################################################################
 #################     github.com/DustyDevelops    #####################
 #######################################################################
-
-
 
 
 
