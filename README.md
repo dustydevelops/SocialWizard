@@ -1,11 +1,16 @@
 # SocialWizard | Automated Engagement.
 ----------------------------------------
+NEVER MISS A FRIENDS BIRTHDAY AND ALWAYS
+BE THE FIRST TO TELL THEM!
+----------------------------------
 Using methods that mimic human behavior,
-you can bypass rules against bots to like,
-follow, unfollow, comment, and explore. 
+you can bypass rules against bots to post,
+like, follow, unfollow, comment, and explore. 
 ----------------------------------------
-Still in the works. But you can use this 
-to login to instagram or facebook.
+
+Still in the works. right now, you can use 
+this to automate birthday wishes
+on facebook or login to instagram.
 I should have the wish your freinds happy 
 birthday feature done soon.
 button.
